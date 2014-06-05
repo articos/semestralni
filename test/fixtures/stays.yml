@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_from: 2014-05-18
+  date_to: 2014-05-18
+  credit_card: 1
+  card_validation: MyString
+  arrive: false
+
+two:
+  date_from: 2014-05-18
+  date_to: 2014-05-18
+  credit_card: 1
+  card_validation: MyString
+  arrive: false

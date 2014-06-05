@@ -1,0 +1,31 @@
+<h1>Listing stays</h1>
+
+<table>
+  <tr>
+    <th>Date from</th>
+    <th>Date to</th>
+    <th>Credit card</th>
+    <th>Card validation</th>
+    <th>Arrive</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stays.each do |stay| %>
+  <tr>
+    <td><%= stay.date_from %></td>
+    <td><%= stay.date_to %></td>
+    <td><%= stay.credit_card %></td>
+    <td><%= stay.card_validation %></td>
+    <td><%= stay.arrive %></td>
+    <td><%= link_to 'Show', stay %></td>
+    <td><%= link_to 'Edit', edit_stay_path(stay) %></td>
+    <td><%= link_to 'Destroy', stay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stay', step1_stays_path %>

@@ -1,0 +1,11 @@
+<% debug params %>
+
+<h2>Volne Hotely</h2>
+<% @hotely.all.each do |hotel| %>
+    <% element_code = "#{hotel.name}]" %>
+    <%= check_box_tag element_code, 1 %>
+    <%= label_tag  element_code, hotel.name %><br/>
+
+<% end %>
+
+

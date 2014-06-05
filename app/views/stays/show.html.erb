@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date from:</b>
+  <%= @stay.date_from %>
+</p>
+
+<p>
+  <b>Date to:</b>
+  <%= @stay.date_to %>
+</p>
+
+<p>
+  <b>Credit card:</b>
+  <%= @stay.credit_card %>
+</p>
+
+<p>
+  <b>Card validation:</b>
+  <%= @stay.card_validation %>
+</p>
+
+<p>
+  <b>Arrive:</b>
+  <%= @stay.arrive %>
+</p>
+
+
+<%= link_to 'Edit', edit_stay_path(@stay) %> |
+<%= link_to 'Back', stays_path %>

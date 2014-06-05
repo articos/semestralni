@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Semestralni</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p style="color: green"><%= flash[:notice] %></p>
+<ul>
+  <li><%= link_to "Zaměstnanci", employees_path %></li>
+  <li><%= link_to "Lokality", locations_path %></li>
+  <li><%= link_to "Zákazníci", customers_path %></li>
+  <li><%= link_to "Pobyty", stays_path %></li>
+  <li><%= link_to "Hotely", hotels_path %></li>
+</ul>
+<%= yield %>
+
+</body>
+</html>
