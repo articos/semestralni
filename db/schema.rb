@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20140518154445) do
   create_table "hotels", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.string   "adress"
+    t.string   "address"
     t.integer  "location_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20140518154445) do
     t.string   "description"
     t.integer  "capacity"
     t.float    "price"
+    t.integer  "hotel_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

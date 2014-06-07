@@ -11,13 +11,38 @@
 </p>
 
 <p>
-  <b>Adress:</b>
-  <%= @hotel.adress %>
+  <b>Address:</b>
+  <%= @hotel.address %>
 </p>
 
 <p>
-  <b>Adress:</b>
+  <b>Location:</b>
   <%= @hotel.location.name %>
+</p>
+
+<p>
+  <b>Zamestnanci:</b>
+<ul>
+  <% @hotel.employees.each do |employee| %>
+      <li>
+        <%= link_to  "#{employee.first_name} #{employee.surname}", employee_path(employee) %> -
+        <%= employee.role %>
+      </li>
+  <% end %>
+</ul>
+</p>
+
+<p>
+  <b>Pokoje:</b>
+<ul>
+  <% @hotel.rooms.each do |room| %>
+      <li>
+        <%= room.name %>
+        <%= link_to "Smazat", hotel_room_path(@hotel, room), method: :delete, confirm: "Chcete smazat ?" %>
+      </li>
+  <% end %>
+</ul>
+<%= link_to "Novy pokoj", new_hotel_room_path(@hotel) %>
 </p>
 
 <%= link_to 'Edit', edit_hotel_path(@hotel) %> |

@@ -11,7 +11,9 @@ Semestralni::Application.routes.draw do
   end
 
 
-  resources :hotels
+  resources :hotels do
+    resources :rooms, except: [:edit, :show, :update]
+  end
 
 
   resources :rooms
